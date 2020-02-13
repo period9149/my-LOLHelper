@@ -1,0 +1,1 @@
+window['SendLog_RES'] = {"data":"","msg":"ok","ret_code":0}

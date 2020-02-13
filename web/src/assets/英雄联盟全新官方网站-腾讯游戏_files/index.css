@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/*!***** 官网首页样式 注意,由于官网小屏适配使用的是zoom,所以样式必须保证最小缩放到1280-滚动条,也不会出错 */
+/*! 引入 sprite图 start*/
+.btn-flashmen,.btn-play-1>a,.btn-play-1>i,.g-wrap-championlist .part-tab-title>li.selected:after,.g-wrap-championlist .part-tab-title>li:after,.g-wrap-championlist .part-tab-title>li:hover:after,.herf-type-0,.hotprogram-list-left,.hotprogram-list-right,.hover-border-1,.hover-border-2,.href-bg-0,.href-bg-1,.href-partner,.icon-666,.icon-666-on,.icon-bbs-1,.icon-fanart-1,.icon-gl-1,.icon-left-arrow,.icon-play-0,.icon-play-1,.icon-right-arrow,.icon-search,.icon-spzx-1,.icon-ss-1,.icon-sszx-1,.icon-xx,.icon-zsj,.index-spr,.inline-icon-0-left,.inline-icon-0-right,.inline-icon-1,.innerhover-border .hover-border-1,.innerhover-border .hover-border-2,.innerhover-bottom .p2>a.on>.icon-666,.innerhover-bottom .p2>a:hover>.icon-666,.m-champion-list-container .champion-item:hover .hover-icon:after,.m-new-champion-one .inner-hover>.border,.m-new-champion-one .inner-hover>.inner-hover-href,.more-hotprogram,.more-href-bg,.more-newchampion-info,.new-tab-content-ul>.first,.news-first-bg,.tab-title-selected-1,.tab-title-selected-1-off,.week-free-a,.week-free-hover>.arrow,.wfc-href-bg{background-image:url(//game.gtimg.cn/images/lol/v3/index-spr.png);background-size:638px 572px;background-repeat:no-repeat}
+.hover-border-1{background-position:0 -253px;width:188px;height:200px}
+.hover-border-2{background-position:-401px 0;width:237px;height:174px}
+.href-bg-0{background-position:-193px -316px;width:118px;height:76px}
+.href-bg-1{background-position:0 -522px;width:506px;height:50px}
+.icon-666-on{background-position:-428px -226px;width:23px;height:17px}
+.icon-666{background-position:-456px -226px;width:23px;height:17px}
+.icon-bbs-1{background-position:-560px -179px;width:40px;height:40px}
+.icon-fanart-1{background-position:-586px -253px;width:40px;height:40px}
+.icon-gl-1{background-position:-496px -253px;width:40px;height:40px}
+.icon-left-arrow{background-position:-221px -397px;width:23px;height:51px}
+.icon-play-0{background-position:-437px -253px;width:54px;height:54px}
+.icon-play-1{background-position:-456px -316px;width:11px;height:13px}
+.icon-right-arrow{background-position:-193px -397px;width:23px;height:51px}
+.icon-search{background-position:-401px -226px;width:22px;height:21px}
+.icon-spzx-1{background-position:-541px -253px;width:40px;height:40px}
+.icon-ss-1{background-position:-361px -316px;width:40px;height:40px}
+.icon-sszx-1{background-position:-316px -316px;width:40px;height:40px}
+.icon-xx{background-position:-605px -179px;width:32px;height:32px}
+.icon-zsj{background-position:-556px -226px;width:14px;height:7px}
+.inline-icon-0-left{background-position:-531px -226px;width:20px;height:9px}
+.inline-icon-0-right{background-position:-506px -226px;width:20px;height:9px}
+.inline-icon-1{background-position:-484px -226px;width:17px;height:17px}
+.more-href-bg{background-position:-401px -179px;width:154px;height:42px}
+.more-newchampion-info{background-position:0 0;width:396px;height:248px}
+.news-first-bg{background-position:0 -458px;width:496px;height:59px}
+.tab-title-selected-1-off{background-position:-406px -316px;width:20px;height:19px}
+.tab-title-selected-1{background-position:-431px -316px;width:20px;height:19px}
+.wfc-href-bg{background-position:-193px -253px;width:239px;height:58px}
+/*! 引入 sprite图 end */
+/*!首页通用样式 start*/
+.g-index-wrap1{width:1358px;height:auto;margin:0 auto;padding:40px 0 80px 0;*zoom:1}
+.g-index-wrap1:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.g-index-wrap1>.g-wrap{padding-bottom:0}
+.g-wrap-vp{width:100%;min-width:1358px;background-color:#e3e2e2;padding:64px 0 66px 0;*zoom:1}
+.g-wrap-vp:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.g-wrap-vp>.g-wrap{padding-bottom:0}
+.g-index-wrap2{width:100%;min-width:1358px;height:543px;background-color:#e3e2e2;margin-top:80px}
+.g-index-wrap2>.g-wrap{padding-bottom:0}
+.innerhover-out{position:absolute;z-index:1;left:50%;top:-20px;overflow:hidden;background-color:#fff;box-shadow:0 0 20px #aaa}
+.innerhover-out>img{width:100%;height:auto;display:block}
+.innerhover-out>.p1{margin-top:10px;width:270px;height:24px;overflow:hidden;line-height:24px;box-sizing:border-box;padding-left:11px;color:#0b0b0b;font-size:16px;text-align:left}
+.innerhover-out>.p2{width:270px;height:20px;overflow:hidden;line-height:20px;box-sizing:border-box;padding-left:11px;color:#a1a1a2;font-size:12px;text-align:left;margin-bottom:10px}
+.innerhover-out>.a1{position:absolute;right:10px;bottom:17px;display:block;width:86px;height:29px;line-height:27px;overflow:hidden;color:#bb9a6c;font-size:14px;text-align:center;box-sizing:border-box;border:1px #bb9a6c solid;-webkit-transition:background-color .2s;transition:background-color .2s}
+.innerhover-out>.a1:hover{color:#fefefe;background-color:#bb9a6c}
+.innerhover-border{background:url(//game.gtimg.cn/images/lol/v3/dark70-bg-repeat.png) repeat;position:absolute;top:0;left:0;text-align:center}
+.innerhover-border .hover-border-1{display:block;position:absolute;left:50%;margin-left:-94px;top:50%;margin-top:-100px;background-position:0 -253px;width:188px;height:200px}
+.innerhover-border .hover-border-2{display:block;position:absolute;left:50%;margin-left:-118.5px;top:50%;margin-top:-87px;background-position:-401px 0;width:237px;height:174px}
+.innerhover-border .innerhover-border-inner{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;position:relative;line-height:1.5;box-sizing:border-box;padding:0 10px}
+.innerhover-border .p1{font-size:16px;font-weight:400;color:#cdbe91;margin-bottom:2px}
+.innerhover-border .p2{overflow:hidden;font-size:12px;color:#9d9c9c}
+.innerhover-bottom{background:url(//game.gtimg.cn/images/lol/v3/dark70-bg-repeat.png) repeat;position:absolute;bottom:-100%;left:0;padding:0 8px 6px 10px;box-sizing:border-box;-webkit-transition:bottom .3s;transition:bottom .3s}
+.innerhover-bottom .p1{width:100%;line-height:24px;font-size:12px;text-align:left;padding:8px 0 8px 2px;box-sizing:border-box}
+.innerhover-bottom .p1>a{color:#fff}
+.innerhover-bottom .p1>a:hover{text-decoration:underline}
+.innerhover-bottom .p2{font-size:14px}
+.innerhover-bottom .p2>a{color:#b2b2b2}
+.innerhover-bottom .p2>a.on,.innerhover-bottom .p2>a:hover{color:#fff}
+.innerhover-bottom .p2>a.on>.icon-666,.innerhover-bottom .p2>a:hover>.icon-666{background-position:-428px -226px;width:23px;height:17px}
+.innerhover-bottom .p2>a.on>.tip{right:0;opacity:0;top:-30px}
+.innerhover-bottom .p2 .tip{right:-200px;top:-15px;position:absolute;color:#fff;display:block;-webkit-transition:opacity 1s,top 1s;transition:opacity 1s,top 1s}
+.innerhover-bottom .a1{float:left}
+.innerhover-bottom .a1>img{width:22px;height:22px;display:inline-block;vertical-align:middle;*zoom:1;*display:inline;margin-top:-6px;margin-right:4px;border-radius:50%}
+.innerhover-bottom .a2{float:right;position:relative}
+/*!首页通用样式 end*/
+/*!首页模块进入效果部分 start*/
+.indexpart-show{visibility:visible!important;animation:bottomin-1 .6s ease;-webkit-animation:bottomin-1 .6s ease}
+.fanart-left,.fanart-right,.g-wrap-championlist>.g-wrap,.g-wrap-match,.m-fresh-video,.m-hotprogram,.m-new-championskin,.m-version-nav{visibility:hidden}
+/*!首页模块进入效果部分 end*/
+/*!活动大图样式 start*/
+.comm-topact.big{height:720px!important}
+.comm-topact.big .top-act-link{bottom:91px}
+.comm-topact.big .topact-big-img{z-index:1}
+.comm-topact.big .topact-small-img{opacity:0}
+/*!活动大图样式 end*/
+/*!首页新闻 start*/
+.m-news{width:496px;height:380px;overflow:hidden;float:right}
+.m-news .part-top-tab{width:496px;height:35px;overflow:visible;box-sizing:border-box;border-bottom:1px #e0e2e2 solid}
+.m-news .part-tab-title{width:596px;height:35px;left:0}
+.m-news .part-tab-title>li{font-size:18px;line-height:24px;margin-right:74px}
+.new-tab-content{width:496px;height:345px}
+.new-tab-content-ul{width:496px;height:305px;position:relative}
+.new-tab-content-ul>.first{list-style:none;background-position:0 -458px;width:496px;height:59px;overflow:hidden;line-height:59px;text-align:center;font-size:22px;font-weight:700;box-sizing:border-box;padding:0 12px;text-overflow:ellipsis;white-space:nowrap;color:#0da0b4}
+.new-tab-content-ul>.first>.item-href{color:#0da0b4}
+.new-tab-content-ul>.first>.item-href:hover{color:#bb9a6c}
+.btn-morenews{display:block;width:496px;height:40px;background-color:#e3e2e2;line-height:40px;text-align:center}
+.btn-morenews:hover{background-color:#dad8d8;border-radius:4px}
+.btn-morenews:hover>i{animation-name:arrowanim;-webkit-animation-name:arrowanim}
+.btn-morenews>.c1{font-size:14px;color:#676767}
+.btn-morenews>.c2{font-size:14px;color:#7ea1a6}
+/*!首页新闻 end*/
+/*!首页活动中心 start*/
+.m-act{width:820px;height:335px;float:left;margin-top:50px}
+.m-act .part-tab-title{width:692px}
+.m-act .part-tab-title>li{margin-right:40px}
+.m-act-list{width:820px;height:278px;margin-top:21px}
+.m-act-list>ul{width:840px;height:278px;position:relative}
+.m-act-list .act-item{margin:0;margin-right:16px}
+/*!首页活动中心 end*/
+/*!首页轮播广告位 start */
+.m-promo{float:left;width:820px;height:380px;overflow:hidden;background-color:#e3e2e2;position:relative}
+.promo-img-list{width:auto;height:340px;overflow:hidden;position:relative}
+.promo-img-list>li{list-style:none;float:left;width:820px;height:340px;overflow:hidden}
+.promo-title-list{width:820px;height:40px;overflow:hidden}
+.promo-title-list>span{list-style:none;float:left;width:164px;height:40px;box-sizing:border-box;background-color:#e3e2e2;font-size:14px;text-align:center;line-height:40px;color:#424242;letter-spacing:1px}
+.promo-title-list>span.selected{color:#ab8e66;background-color:#f7f6f6;border-bottom:2px #cea861 solid}
+/*!首页轮播广告位 end */
+/*! 游戏功能导航 start*/
+.m-gamefunc-nav{width:496px;height:335px;float:right;margin-top:50px;position:relative}
+.m-gamefunc-nav .p1{margin-left:12px}
+.m-gamefunc-nav .p2{margin:17px 0 0 12px}
+.m-gamefunc-nav .p3{margin:15px 16px 0 0}
+.m-gamefunc-nav .p4{margin-top:15px}
+.m-gamefunc-nav .herf-type-1{position:relative}
+.m-gamefunc-nav .icon-new-1{position:absolute;left:0}
+.slide-nav-ul>li{float:left;list-style:none}
+.herf-download{float:left;width:366px;height:168px;overflow:hidden;background-image:url(//game.gtimg.cn/images/lol/v3/pic-download.png);-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1);position:relative}
+.herf-download:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.herf-download>video{display:block;width:366px;height:168px}
+.herf-type-0{float:left;background-position:-193px -316px;width:118px;height:76px;color:#fff;font-size:14px;font-weight:700;text-align:center;line-height:76px;-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1)}
+.herf-type-0:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.herf-type-1{float:left;width:112px;height:68px;color:#424242;text-align:center;line-height:68px;background-color:#fefefe;-webkit-transition:box-shadow .2s;transition:box-shadow .2s}
+.herf-type-1:hover{border-radius:4px;box-shadow:0 0 10px #ccc;color:#0da0b4}
+.herf-type-1:hover>i{animation:scale1 ease 1.3s 1;-webkit-animation:scale1 ease 1.3s 1}
+.herf-type-1:hover>.icon-wjsq{animation:wjsqmove .6s 1 ease-in-out;-webkit-animation:wjsqmove .6s 1 ease-in-out}
+.btn-flashmen{float:left;background-position:-193px -316px;width:118px;height:76px;color:#fff;font-size:14px;font-weight:700;text-align:center;line-height:76px;overflow:hidden;position:relative}
+.btn-flashmen:hover .inner-hover{display:block}
+.btn-flashmen .inner-hover{display:none;position:absolute;left:0;top:0;width:120px;height:100%;overflow:hidden;background-color:#fff}
+.btn-flashmen .inner-hover>a{float:left;width:60px;box-sizing:border-box;border-right:1px #eee solid;color:#424242;font-size:12px;line-height:30px}
+.btn-flashmen .inner-hover>a:hover{color:#0da0b4}
+.btn-flashmen .inner-hover>a:hover>i{animation:scale1 ease 1.3s 1;-webkit-animation:scale1 ease 1.3s 1}
+.btn-flashmen .inner-hover>a>i{display:block;margin:18px auto 0 auto}
+.herf-type-2{float:left;width:240px;height:68px;color:#424242;text-align:center;line-height:68px;background-color:#fefefe;-webkit-transition:box-shadow .2s;transition:box-shadow .2s}
+.herf-type-2:hover{border-radius:4px;box-shadow:0 0 10px #ccc;color:#0da0b4}
+.herf-type-2:hover>i{animation:scale1 ease 1.3s 1;-webkit-animation:scale1 ease 1.3s 1}
+.circle-hover{position:absolute;z-index:11;right:5px;bottom:-82px;width:230px;height:230px;border-radius:50%;background-color:#fff;background-color:rgba(255,255,255,.95);box-shadow:0 0 20px #ccc;display:none}
+.circle-hover .icon-xx{display:block;position:absolute;left:50%;top:50%;margin:-16px 0 0 -16px}
+.circle-hover>a{position:absolute;display:block;width:auto;text-align:center;color:#424242;font-size:12px}
+.circle-hover>a:hover{color:#0da0b4}
+.circle-hover>a>i{display:block;margin:0 auto}
+.circle-hover.show{display:block;animation:circlehovershow .6s 1 ease-in-out;-webkit-animation:circlehovershow .6s 1 ease-in-out}
+.circle-hover .a1{top:17px;left:95px}
+.circle-hover .a2{top:68px;left:19px}
+.circle-hover .a3{top:68px;right:19px}
+.circle-hover .a4{left:54px;top:148px}
+.circle-hover .a5{right:54px;top:148px}
+/*! 游戏功能导航 end */
+/*! 新英雄新皮肤 start */
+.m-new-championskin{float:left;width:820px;height:254px;margin-top:51px}
+.m-new-champion-one,.m-new-skin-one{float:left;position:relative;width:402px;height:254px;background-color:#f7f6f6}
+.m-new-champion-one>.herf-more,.m-new-skin-one>.herf-more{right:12px;top:auto;bottom:6px}
+.m-new-champion-one>.inner-hover,.m-new-skin-one>.inner-hover{position:absolute;top:0;left:0;width:402px;height:254px;overflow:hidden;background:url(//game.gtimg.cn/images/lol/v3/dark70-bg-repeat.png) repeat;display:none;z-index:11}
+.m-new-champion-one>.inner-hover>.hover-back,.m-new-skin-one>.inner-hover>.hover-back{display:block;height:27px;line-height:27px;font-size:12px;color:#cdbe91;box-sizing:border-box;padding-left:10px;margin-top:5px}
+.m-new-champion-one>.inner-hover>.hover-back:hover>i,.m-new-skin-one>.inner-hover>.hover-back:hover>i{animation-name:arrowanim1;-webkit-animation-name:arrowanim1}
+.m-new-champion-one>.inner-hover.show,.m-new-skin-one>.inner-hover.show{display:block;animation:bottomIn .3s;-webkit-animation:bottomIn .3s}
+.m-new-champion-one .inner-hover>.border{display:block;position:absolute;left:3px;top:3px;background-position:0 0;width:396px;height:248px}
+.m-new-champion-one .inner-hover>.inner-hover-href{position:absolute;left:25px;bottom:18px;display:block;background-position:-401px -179px;width:154px;height:42px;color:#ffdb8b;font-size:14px;text-align:center;line-height:42px;-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1)}
+.m-new-champion-one .inner-hover>.inner-hover-href:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.m-new-champion-one .inner-hover>.inner-hover-href:hover>.more-arrow-2{animation-name:arrowanim;-webkit-animation-name:arrowanim}
+.m-new-champion-one .inner-hover>.p1{color:#cdbe91;font-size:18px;position:absolute;left:27px;top:20px}
+.m-new-champion-one:hover .inner-hover{display:block;animation:bottomIn .3s;-webkit-animation:bottomIn .3s}
+.champion-ability{width:450px;height:auto;overflow:hidden;padding-left:27px;box-sizing:border-box;margin-top:58px}
+.champion-ability>li{font-size:14px;color:#fff;text-align:left;width:175px;height:30px;line-height:30px;list-style:none;float:left;margin:0 32px 9px 0}
+.champion-power-bar{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:80px;height:4px;background-color:#6c6c6c;position:relative}
+.champion-power-bar>i{display:block;position:absolute;height:4px;left:0;top:0;width:50%;background-color:#fff}
+.champion-hard-bar{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;overflow:hidden;width:111px;height:4px;text-align:left;font-size:0}
+.champion-hard-bar>i{float:left;width:34px;height:4px;background-color:#6c6c6c;margin-right:3px}
+.champion-hard-bar.h1>.i1{background-color:#fff}
+.champion-hard-bar.h2>.i1{background-color:#fff}
+.champion-hard-bar.h2>.i2{background-color:#fff}
+.champion-hard-bar.h3>i{background-color:#fff}
+.m-new-skin-one{margin-left:16px}
+.m-new-skin-one .innerhover-out{display:none;width:435px;margin-left:-217px}
+.m-new-skin-one .hover-video{width:435px;height:244px;overflow:hidden;position:absolute;left:0;top:0}
+.m-new-skin-one>.innerhover-out>img{display:block;width:435px;height:244px}
+.m-new-skin-one.show .innerhover-out{display:block;animation:scalein-1 .3s;-webkit-animation:scalein-1 .3s}
+.m-more-skin{width:1358px;height:0;-webkit-transition:height .3s,margin-top .3s;transition:height .3s,margin-top .3s;will-change:height;float:left;position:relative;overflow:hidden}
+.m-more-skin>.content{width:1368px;height:100%;float:left}
+.m-more-skin>.content>ul{width:1368px;float:left}
+.m-more-skin.show{height:117px;margin-top:42px}
+.more-skin-item{list-style:none;width:185px;height:117px;overflow:hidden;float:left;margin-right:10px;position:relative}
+.more-skin-item>img{width:185px;height:117px;-webkit-transition:transform .2s;transition:transform .2s;-webkit-transform:scale(1);transform:scale(1)}
+.more-skin-item>.skinname{position:absolute;bottom:0;left:0;width:100%;height:30px;line-height:30px;font-size:14px;text-align:center;color:#fff;background:url(//game.gtimg.cn/images/lol/v3/dark70-bg-repeat.png) repeat}
+.more-skin-item>.skinname>.a2{color:#cdbe91}
+.more-skin-item:hover>img{-webkit-transform:scale(1.1);transform:scale(1.1)}
+.pic-mask-0{position:absolute;bottom:0;left:0;background:url(//game.gtimg.cn/images/lol/v3/pic-mask-0.png) repeat;width:100%;height:133px}
+.tip-championskin{position:absolute;display:block;left:9px;top:9px;width:auto;height:20px;padding:0 6px;border-radius:2px;font-size:12px;text-align:center;color:#cdbe91;line-height:19px;background-color:#000}
+.intro-championskin{width:100%;padding:0 17px;box-sizing:border-box;position:absolute;left:0;bottom:33px;font-size:16px;font-weight:700;color:#cdbe91}
+.name-championskin{width:100%;padding-left:17px;box-sizing:border-box;position:absolute;left:0;bottom:12px;font-size:14px}
+.name-championskin>a{color:#cfcfcf}
+.name-championskin>a:hover{text-decoration:underline}
+/*! 新英雄新皮肤 end */
+/*! 版本导航 start */
+.m-version-nav{width:496px;height:255px;float:right;position:relative;padding-top:51px}
+.new-model,.new-version{background-color:#f7f6f6;position:relative;float:left;width:240px;height:120px;overflow:visible;margin-bottom:15px}
+.new-model>img,.new-version>img{width:240px;height:120px}
+.new-model .innerhover-out,.new-version .innerhover-out{display:none;width:270px;margin-left:-135px}
+.new-model:hover>.innerhover-out,.new-version:hover>.innerhover-out{display:block;animation:scalein-1 .3s;-webkit-animation:scalein-1 .3s}
+.new-model .hover-video,.new-version .hover-video{width:270px;height:186px;overflow:hidden;position:absolute;left:0;top:0}
+.hover-video:after{content:'\0020';display:block;width:42px;height:50px;position:absolute;right:-2px;bottom:-2px;z-index:10}
+.new-version .innerhover-out>img{width:270px;height:186px}
+.new-model .hover-img{position:absolute;left:0;top:0;display:none}
+.new-model:hover .hover-img{display:block;animation:opacityin .5s;-webkit-animation:opacityin .5s}
+.club-developer{float:right;width:242px;height:180px;position:relative;background-color:#f7f6f6}
+.club-developer>.innerhover-border{display:none;width:242px;height:180px;line-height:180px}
+.club-developer:hover>.innerhover-border{display:block;animation:opacityin .3s;-webkit-animation:opacityin .3s}
+.week-free-champion{float:right;width:239px;height:58px;overflow:visible;position:relative;margin-top:17px}
+.week-free-a{display:block;background-position:-193px -253px;width:239px;height:58px;line-height:58px;text-align:center;font-size:16px;color:#fff;-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1)}
+.week-free-a:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.week-free-a:hover>i{animation-name:arrowanim;-webkit-animation-name:arrowanim}
+.week-free-hover{display:none;*zoom:1;width:auto;height:auto;background-color:#fff;position:absolute;top:320px;box-shadow:0 0 12px #bbb;padding:6px 5px 10px 5px;z-index:2;right:0}
+.week-free-hover:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.week-free-hover.show{display:block;animation:topin .3s;-webkit-animation:topin .3s}
+.week-free-hover>ul{width:420px;overflow:hidden;margin:0 auto}
+.week-free-hover>.arrow{display:block;background-position:-556px -226px;width:14px;height:7px;position:absolute;top:-7px;right:114px;z-index:10}
+.week-free-item{width:auto;height:auto;overflow:hidden;float:left;list-style:none;margin:7px 5px 0 5px;position:relative}
+.week-free-item>img{display:block;width:46px;height:46px;border:2px #bb9a6c solid;border-radius:50%}
+/*! 版本导航 end */
+/*! 最新视频 start */
+.m-fresh-video{width:820px;height:463px;float:left}
+.m-fresh-video .part-tab-title{width:694px;border-bottom-color:#d6d7d8}
+.m-fresh-video .part-tab-title>li{margin-right:40px}
+.fresh-video-content{width:840px;height:auto;min-height:130px;position:relative;margin-top:32px;overflow:hidden}
+.video-item{list-style:none;float:left;width:193px;height:185px;overflow:hidden;margin:0 16px 16px 0;position:relative}
+.video-item:hover .btn-play-1{display:block;animation:opacityin .3s 1;-webkit-animation:opacityin .3s 1}
+.video-item:hover .btn-play-1>i{animation:animrotate 3s linear infinite;-webkit-animation:animrotate 3s linear infinite}
+.video-item:hover .name-video>a{color:#0da0b4;text-decoration:none}
+.video-item>.mask-img{display:block;width:193px;height:107px;overflow:hidden;position:relative}
+.video-item>.mask-img>.video-cover{display:block;position:relative;width:198px;height:110px}
+.video-item .video-pre-wrap{position:absolute;left:0;top:0;display:block;width:193px;height:107px}
+.video-item .video-pre-wrap>.video-pre-bar,.video-item .video-pre-wrap>span{position:absolute;left:4px;right:4px;top:4px;height:4px}
+.video-item .video-pre-wrap>.video-pre-bg{background-color:#fff;opacity:.5;filter:alpha(opacity=50)}
+.video-item .video-pre-wrap>.video-pre-bar>i{display:block;width:0;height:100%;background-color:#fff;-webkit-transition:width 51ms linear;transition:width 51ms linear}
+.video-item>.name-video{position:absolute;left:0;top:118px;width:100%;height:42px;overflow:hidden;padding:0 10px;box-sizing:border-box;font-size:14px;line-height:21px;color:#424242}
+.video-item>.name-video>a{color:#424242}
+.video-item>.play-times{position:absolute;left:9px;bottom:4px;font-size:12px;color:#919091}
+.video-item>.update-time{position:absolute;right:13px;bottom:4px;font-size:12px;color:#919091}
+.video-item>.video-length{position:absolute;right:10px;top:85px;color:#fff;font-size:12px}
+.btn-play-1{display:none;width:54px;height:54px;position:absolute;left:50%;top:50%;margin:-27px 0 0 -27px}
+.btn-play-1>i{position:absolute;left:0;top:0;display:block;background-position:-437px -253px;width:54px;height:54px}
+.btn-play-1>a{position:relative;display:block;background-position:-456px -316px;width:11px;height:13px;margin:20px auto 0 auto}
+/*! 最新视频 end */
+/*! 最热专辑 start*/
+.m-hotprogram{float:right;width:496px}
+.m-hotprogram .part-tab-title{border-bottom-color:#d6d7d8;width:367px}
+.m-hotprogram .part-tab-title>li{margin-right:14px}
+.m-hotprogram .part-tab-title>.end{margin-right:0}
+.hotprogram-list-wrap{width:496px;height:337px;overflow:visible;margin-top:32px;position:relative}
+.hotprogram-list{width:513px;height:337px;overflow:hidden}
+.hotprogram-list>ul{width:auto;height:337px;overflow:hidden;position:relative}
+.hotprogram-item{float:left;width:156px!important;height:337px;position:relative;margin-right:15px;list-style:none}
+.hotprogram-item>.program-pic{width:156px;height:212px}
+.hotprogram-item>.herf-mask{height:212px}
+.hotprogram-item>.name-program{font-size:16px;font-weight:700;text-align:center;color:#fff;width:100%;height:30px;line-height:30px;overflow:hidden;position:absolute;left:0;top:140px}
+.hotprogram-item>.progress-program{font-size:12px;text-align:center;color:#fff;width:100%;height:36px;line-height:18px;overflow:hidden;position:absolute;left:0;top:169px;box-sizing:border-box;padding:0 7px}
+.hotprogram-item>.name-progress{font-size:14px;text-align:left;color:#919091;width:100%;height:42px;line-height:21px;overflow:hidden;position:absolute;left:0;top:224px;box-sizing:border-box;padding:0 7px}
+.hotprogram-item>.name-progress:hover{color:#0da0b4}
+.hotprogram-item>.author-program{display:block;width:100%;height:30px;line-height:30px;box-sizing:border-box;padding-left:4px;color:#919091;font-size:12px;position:absolute;left:0;top:280px}
+.hotprogram-item>.author-program:hover{color:#0da0b4}
+.hotprogram-item>.author-program>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;border-radius:50%;width:30px;height:30px;margin:-2px 2px 0 0}
+.hotprogram-list-left,.hotprogram-list-right{display:block;position:absolute;top:89px;filter:brightness(1);-webkit-filter:brightness(1);-webkit-transition:filter .2s;transition:filter .2s}
+.hotprogram-list-left:hover,.hotprogram-list-right:hover{filter:brightness(1.07);-webkit-filter:brightness(1.07)}
+.hotprogram-list-left{background-position:-221px -397px;width:23px;height:51px;left:-29px}
+.hotprogram-list-right{background-position:-193px -397px;width:23px;height:51px;right:-29px;z-index:2}
+.more-hotprogram{display:block;background-position:0 -522px;width:506px;height:50px;font-size:16px;color:#ab8e66;text-align:center;line-height:50px;margin-left:-5px;-webkit-transition:brightness .3s;transition:brightness .3s}
+.more-hotprogram:hover{filter:brightness(1.08);-webkit-filter:brightness(1.08)}
+.more-hotprogram:hover>i{animation-name:arrowanim;-webkit-animation-name:arrowanim}
+/*! 最热专辑 end */
+/*! 英雄资料 start */
+.g-wrap-type3{width:100%;height:543px;background-color:#e3e2e2}
+.g-wrap-championlist{height:auto;margin-top:0;padding:66px 0 66px 0;position:relative;width:100%;min-width:1358px;overflow:hidden;background-color:#e3e2e2}
+.g-wrap-championlist>.g-wrap{padding-bottom:0}
+.g-wrap-championlist .part-tab-title{border:none}
+.g-wrap-championlist .part-tab-title>li{padding-left:28px;line-height:42px;margin-right:40px}
+.g-wrap-championlist .part-tab-title>li:after{display:block;top:11px;left:2px;margin-left:0;background-position:-406px -316px;width:20px;height:19px}
+.g-wrap-championlist .part-tab-title>li.selected:after,.g-wrap-championlist .part-tab-title>li:hover:after{background-position:-431px -316px;width:20px;height:19px;left:2px}
+.m-champion-list-container{width:1395px;height:438px;overflow:hidden;margin-top:21px!important;position:relative}
+.m-champion-list-container .hover-icon{display:none;position:absolute;width:66px;height:66px;top:0;left:12px;background:url(//game.gtimg.cn/images/lol/v3/dark70-bg-repeat.png) repeat}
+.m-champion-list-container .champion-item{list-style:none;float:left;width:90px;height:100px;overflow:visible;margin:0 16px 12px 0;position:relative;cursor:pointer}
+.m-champion-list-container .champion-item:hover>p{color:#1da6ba}
+.m-champion-list-container .champion-item:hover .hover-icon{display:block;animation:opacityin .2s;-webkit-animation:opacityin .2s}
+.m-champion-list-container .champion-item:hover .hover-icon:after{content:'\0020';display:block;margin:24px auto 0 auto;background-position:-401px -226px;width:22px;height:21px}
+.m-champion-list-container .champion-item>img{display:block;margin:0 auto;width:66px;height:66px}
+.m-champion-list-container .champion-item>p{width:90px;height:30px;line-height:30px;text-align:center;font-size:12px;color:#333}
+.m-champion-list-container .scrollbar{right:23px;width:5px;height:438px}
+.m-champion-list-container:hover .scrollbar{width:10px}
+/*! 英雄资料 end */
+/*! fanart创作馆 start */
+.g-wrap-fanart{width:1358px;height:auto;margin:0 auto;padding:66px 0 82px 0;*zoom:1}
+.g-wrap-fanart:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.g-wrap-fanart>.g-wrap{padding-bottom:0}
+.fanart-left{width:820px;float:left}
+.fanart-left-content{width:840px;height:368px;position:relative;overflow:hidden;margin-top:21px}
+.fanart-left-content .innerhover-bottom{width:100%}
+.fanart-left-content>li{list-style:none;float:left;width:192px;height:176px;position:relative;overflow:hidden;background-color:#e3e2e2;margin:0 17px 17px 0}
+.fanart-left-content>li:hover .innerhover-bottom{bottom:0}
+.fanart-left-content>li:hover .fanart-img{-webkit-transform:scale(1.3);transform:scale(1.3)}
+.fanart-left-content>li>a{display:block;width:100%;height:100%;position:relative}
+.fanart-left-content>li .fanart-img{display:block;-webkit-transition:transform .3s;transition:transform .3s;-webkit-transform:scale(1);transform:scale(1);width:192px;height:192px;position:absolute;left:0;top:-8px}
+.fanart-left-content>.p1{margin:0 6px 9px 0}
+.fanart-left-content>.p2{margin-bottom:9px}
+.fanart-right{width:496px;float:right}
+.fanart-right-right{float:right;margin-top:55px}
+.fanart-right-right>.herf-right-1{list-style:none;margin-bottom:16px;position:relative;display:block;width:240px;height:87px;overflow:hidden;-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1)}
+.fanart-right-right>.herf-right-1:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.fanart-right-right>.herf-right-1>img{position:absolute;left:0;top:0}
+.fanart-right-right>.herf-right-1>a{position:relative;display:block;width:100%;height:100%;color:#fff;font-size:16px;line-height:87px}
+.main-column{width:241px;height:411px;overflow:hidden;float:left;margin-top:13px;position:relative;-webkit-transition:transform .3s,filter .3s;transition:transform .3s,filter .3s;-webkit-transform:translateY(0);transform:translateY(0);filter:brightness(1);-webkit-filter:brightness(1)}
+.main-column>.p1{position:absolute;left:0;bottom:103px;text-align:center;width:100%;height:30px;line-height:30px;overflow:hidden;color:#fff;font-size:16px}
+.main-column>.p2{position:absolute;left:0;bottom:58px;width:100%;height:45px;line-height:45px;overflow:hidden;font-size:22px;color:#fff;text-align:center;font-weight:400}
+.main-column>.p3{position:absolute;left:0;bottom:14px;width:100%;height:42px;box-sizing:border-box;padding:0 7px;line-height:21px;overflow:hidden;font-size:16px;text-align:center;color:#dfacc0}
+.main-column:hover{filter:brightness(1.08);-webkit-filter:brightness(1.08);-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+.href-partner{display:block;background-position:-193px -253px;width:239px;height:58px;line-height:58px;overflow:visible;position:relative;z-index:2;float:right;margin-top:2px}
+.href-partner:hover .partner-list-container{display:block;animation:topin .3s;-webkit-animation:topin .3s}
+.href-partner:hover .more-arrow-1{animation-name:arrowanim;-webkit-animation-name:arrowanim}
+.href-partner>a{color:#fff;font-size:16px;display:block;text-align:center}
+.partner-list-container{display:none;z-index:1;width:239px;height:266px;padding:6px 0;background-color:#fff;position:absolute!important;left:0;top:58px;overflow:hidden;box-shadow:0 3px 10px #ccc;text-align:left}
+.partner-list-container .scrollbar{top:6px;right:4px;width:5px;height:266px}
+.partner-list-container:hover .scrollbar{width:8px}
+.partner-list-container .partner-list-wrapper{width:100%;height:auto}
+.partner-list-container ul{width:100%}
+.partner-list-container li{list-style:none;width:100%;height:19px;box-sizing:border-box;padding-left:12px;line-height:25px;margin:8px 0}
+.partner-list-container li:hover{background-color:#eee}
+.partner-list-container a{display:block;width:100%;height:100%;font-size:12px;line-height:19px;color:#676767}
+@keyframes zantipshow{
+0%{-webkit-transform:translateY(-5px);transform:translateY(-5px);opacity:0}
+40%{opacity:1;-webkit-transform:translateY(-15px);transform:translateY(-15px)}
+80%{opacity:1;-webkit-transform:translateY(-25px);transform:translateY(-25px)}
+100%{opacity:0;-webkit-transform:translateY(-25px);transform:translateY(-25px)}
+}
+@-webkit-keyframes zantipshow{
+0%{-webkit-transform:translateY(-5px);transform:translateY(-5px);opacity:0}
+40%{opacity:1;-webkit-transform:translateY(-15px);transform:translateY(-15px)}
+80%{opacity:1;-webkit-transform:translateY(-25px);transform:translateY(-25px)}
+100%{opacity:0;-webkit-transform:translateY(-25px);transform:translateY(-25px)}
+}
+/*! fanart创作馆 end */
+/*! 赛事模块外层样式 start*/
+.g-wrap-match{width:1358px;height:auto;margin:0 auto;padding:64px 0 80px 0;*zoom:1}
+.g-wrap-match:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.g-wrap-match>.g-wrap{padding-bottom:0}
+.g-wrap-match>.part-top-tab>.part-tab-title{width:1230px}
+.g-wrap-match>.part-top-tab>.part-tab-title>li{margin-right:54px}
+.m-events-container{width:100%;height:auto;min-height:300px;position:relative;padding-top:26px}
+.match-show{animation:opacityin .3s;-webkit-animation:opacityin .3s}
+.toptip-event{position:absolute;top:0;right:61px;width:auto;height:35px;line-height:35px;font-size:16px;font-weight:700;color:#676767}
+.toptip-event:hover{text-decoration:underline}
+.toptip-event>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:25px;height:25px;margin:-2px 4px 0 0}
+/*! 赛事模块外层样式 end*/

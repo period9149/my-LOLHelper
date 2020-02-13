@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/*! 赛事模块样式
+ * 有新增或者重载,请写在文档末尾并加上注释,不能在原样式类上修改,以免污染其他使用该样式的赛事
+ * 注意,由于官网小屏适配使用的是zoom,所以样式必须保证最小缩放到1280-滚动条,也不会出错
+*/
+/*!引入赛事雪碧图 start*/
+.icon-role,.p-bottom,.p-jungle,.p-mid,.p-sup,.p-top{background-image:url(//ossweb-img.qq.com/images/lol/v3/icon-role.png);background-size:70px 45px;background-repeat:no-repeat}
+.p-bottom{background-position:0 -27px;width:18px;height:18px}
+.p-jungle{background-position:0 0;width:20px;height:22px}
+.p-mid{background-position:-23px -27px;width:18px;height:18px}
+.p-sup{background-position:-25px 0;width:22px;height:18px}
+.p-top{background-position:-52px 0;width:18px;height:18px}
+.allstar-1v1>.allstar-link-part-1>.allstar-link-1,.allstar-1v1>.allstar-link-part-1>.allstar-link-2,.allstar-1v1>.allstar-link-part-2>.allstar-link-3,.allstar-1v1>.allstar-link-part-2>.allstar-link-4,.allstar-1v1>.allstar-link-part-3>.allstar-link-5,.allstar-1v1>.allstar-link-part-3>.allstar-link-6,.allstar-1v1>.allstar-link-part-4>.allstar-link-7,.demacia-cup .link-1,.demacia-cup .link-2,.demacia-cup .link-3,.demacia-link-1,.demacia-link-2,.demacia-link-3,.event-type-1 .link-1,.events-spr,.link-1,.link-2,.link-3,.link-4,.link-5,.match-allstar-link-1,.match-allstar-link-2,.match-allstar-link-3,.match-allstar-link-4,.match-allstar-link-5,.match-allstar-link-6,.match-allstar-link-7,.match-smallarrow-left,.match-smallarrow-right{background-image:url(//ossweb-img.qq.com/images/lol/v3/events-spr.png);background-size:699px 607px;background-repeat:no-repeat}
+.demacia-link-1{background-position:-616px -262px;width:35px;height:129px}
+.demacia-link-2{background-position:-616px 0;width:35px;height:257px}
+.demacia-link-3{background-position:0 0;width:308px;height:447px}
+.link-1{background-position:0 -452px;width:110px;height:155px}
+.link-2{background-position:-115px -452px;width:72px;height:55px}
+.link-3{background-position:-313px -272px;width:276px;height:134px}
+.link-4{background-position:-313px 0;width:298px;height:267px}
+.link-5{background-position:-192px -452px;width:300px;height:1px}
+.match-allstar-link-1{background-position:-672px -465px;width:11px;height:116px}
+.match-allstar-link-2{background-position:-688px -472px;width:11px;height:116px}
+.match-allstar-link-3{background-position:-688px 0;width:11px;height:231px}
+.match-allstar-link-4{background-position:-688px -236px;width:11px;height:231px}
+.match-allstar-link-5{background-position:-656px 0;width:11px;height:460px}
+.match-allstar-link-6{background-position:-672px 0;width:11px;height:460px}
+.match-allstar-link-7{background-position:-688px -593px;width:11px;height:1px}
+.match-smallarrow-left{background-position:-616px -396px;width:23px;height:21px}
+.match-smallarrow-right{background-position:-616px -422px;width:23px;height:21px}
+/*!引入赛事雪碧图 end*/
+/*!公用元素 start*/
+.match-part-name{width:100%;height:35px;line-height:35px;text-align:left;color:#29a2b4;font-size:16px;font-weight:700;box-sizing:border-box;padding-left:1px}
+.match-part-name>a{margin-left:10px;font-weight:400;color:#676767}
+.herf-data,.herf-order,.herf-video{float:right;padding:0 6px;box-sizing:border-box;border:1px solid;font-size:14px;height:20px;line-height:18px;margin-left:10px;-webkit-transition:background-color .2s,color .2s;transition:background-color .2s,color .2s}
+.herf-data{border-color:#7ea1a6;color:#7ea1a6}
+.herf-data:hover{background-color:#7ea1a6;color:#fff}
+.herf-video{border-color:#bb9a6c;color:#bb9a6c}
+.herf-video:hover{background-color:#bb9a6c;color:#fff}
+.herf-order{border-color:#1da6ba;color:#1da6ba}
+.herf-order:hover{background-color:#1da6ba;color:#fff}
+/*!公用元素 end*/
+/*!晋级1 start*/
+.u-winer{width:392px;height:44px;overflow:hidden;font-size:0;line-height:44px;background-color:#f7f6f6}
+.u-winer>.a1{float:left;width:224px;height:44px;overflow:hidden;color:#676767;font-size:14px}
+.u-winer>.a2{float:right;width:106px;height:44px;overflow:hidden;color:#000;font-size:18px}
+.u-winer>i{float:left;height:44px;width:4px;background-color:#1da6ba}
+.u-winer>span{float:left;height:44px;width:54px;text-align:center}
+.u-winer>span>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:auto;height:auto;max-height:30px}
+/*!晋级1 end*/
+/*!滚动赛事模块 start*/
+.recent-gamelist{height:auto;position:relative}
+.recent-gamelist .icon-left-arrow,.recent-gamelist .icon-right-arrow{display:block;position:absolute;bottom:74px;z-index:1;filter:brightness(1);-webkit-filter:brightness(1);-webkit-transition:filter .2s;transition:filter .2s}
+.recent-gamelist .icon-left-arrow:hover,.recent-gamelist .icon-right-arrow:hover{filter:brightness(1.07);-webkit-filter:brightness(1.07)}
+.recent-gamelist .icon-left-arrow{left:-29px}
+.recent-gamelist .icon-right-arrow{right:-13px}
+.recent-gamelist-container{height:198px}
+.recent-gamelist-container>ul{width:auto;height:198px;overflow:hidden}
+.recent-gamelist5{width:1375px}
+.recent-gamelist5 .recent-gamelist-container{width:1375px}
+.recent-gamelist2{width:550px}
+.recent-gamelist2 .recent-gamelist-container{width:550px}
+.gamelist-item{list-style:none;float:left;width:259px!important;height:198px;margin-right:16px;position:relative;background-color:#fefefe}
+.gamelist-item>.p1,.gamelist-item>.p2{width:100%;line-height:1.5;font-size:12px;text-align:center;color:#727272}
+.gamelist-item>.p1{margin-top:12px}
+.gamelist-team-a,.gamelist-team-b{position:absolute;width:85px;height:85px;overflow:hidden;text-align:center}
+.gamelist-team-a>span,.gamelist-team-b>span{display:block;width:85px;height:65px;line-height:65px;text-align:center}
+.gamelist-team-a>span>img,.gamelist-team-b>span>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;max-width:50px;width:auto;height:auto}
+.gamelist-team-a>a,.gamelist-team-b>a{color:#385155;font-size:18px;line-height:20px}
+.gamelist-team-a{left:6px;top:38px}
+.gamelist-team-b{right:6px;top:38px}
+.gamelist-score{display:block;width:86px;height:40px;color:#171717;font-weight:700;text-align:center;line-height:40px;position:absolute;top:54px;left:50%;font-size:0;margin-left:-43px}
+.gamelist-score>a{font-size:34px;margin:0 2px}
+.gamelist-watch{display:block;width:86px;height:29px;line-height:29px;text-align:center;box-sizing:border-box;border:1px #10aac0 solid;color:#10aac0;margin:105px auto 0 auto;-webkit-transition:background-color .2s;transition:background-color .2s}
+.gamelist-watch:hover{background-color:#10aac0;color:#fff}
+.gamelist-wait{display:block;width:86px;height:29px;line-height:29px;text-align:center;box-sizing:border-box;border:1px #bb9a6c solid;color:#bb9a6c;margin:105px auto 0 auto;-webkit-transition:background-color .2s;transition:background-color .2s}
+.gamelist-wait:hover{background-color:#bb9a6c;color:#fff}
+.gamelist-over{display:block;width:86px;height:29px;line-height:29px;text-align:center;box-sizing:border-box;border:1px #727272 solid;color:#727272;margin:105px auto 0 auto;-webkit-transition:background-color .2s;transition:background-color .2s}
+.gamelist-over:hover{background-color:#727272;color:#fff}
+.gamelist-item-topbar{width:100%;height:28px;box-sizing:border-box;font-size:16px;color:#fff;line-height:28px;position:absolute;left:0;top:0}
+.gamelist-item-topbar>i{display:block;background:url(//ossweb-img.qq.com/images/lol/v3/gamelist-top-ware.png) repeat-x 0 0;width:285px;height:28px;position:absolute;left:0;top:0}
+.gamelist-item-topbar>.span1{float:left;font-weight:700;margin-left:12px;position:relative}
+.gamelist-item-topbar>.span2{float:right;margin-right:14px;position:relative}
+.gamelist-item-topbar>.span3{float:right;margin-right:12px;position:relative}
+.gamelist-item-topbar.now{background-color:#0eabc1;background:-webkit-linear-gradient(left,#0ca3b9,#17c2da);/*! Safari 5.1 - 6.0 */background:-o-linear-gradient(left,#0ca3b9,#17c2da);/*! Opera 11.1 - 12.0 */background:-moz-linear-gradient(left,#0ca3b9,#17c2da);/*! Firefox 3.6 - 15 */background:linear-gradient(left,#0ca3b9,#17c2da)/*! 标准的语法 */}
+.gamelist-item-topbar.now>i{animation:gamelist-item-topbar-ware .5s linear infinite;-webkit-animation:gamelist-item-topbar-ware .5s linear infinite}
+.gamelist-item-topbar.wait{background-color:#bfa57d;background:-webkit-linear-gradient(left,#b69d75,#d6ba92);/*! Safari 5.1 - 6.0 */background:-o-linear-gradient(left,#b69d75,#d6ba92);/*! Opera 11.1 - 12.0 */background:-moz-linear-gradient(left,#b69d75,#d6ba92);/*! Firefox 3.6 - 15 */background:linear-gradient(left,#b69d75,#d6ba92)/*! 标准的语法 */}
+.gamelist-item-topbar.over{background-color:#b2b2b2;background:-webkit-linear-gradient(left,#adadad,#c1c0c0);/*! Safari 5.1 - 6.0 */background:-o-linear-gradient(left,#adadad,#c1c0c0);/*! Opera 11.1 - 12.0 */background:-moz-linear-gradient(left,#adadad,#c1c0c0);/*! Firefox 3.6 - 15 */background:linear-gradient(left,#adadad,#c1c0c0)/*! 标准的语法 */}
+@keyframes gamelist-item-topbar-ware{
+0%{-webkit-transform:translateX(0);transform:translateX(0)}
+100%{-webkit-transform:translateX(-19px);transform:translateX(-19px)}
+}
+@-webkit-keyframes gamelist-item-topbar-ware{
+0%{-webkit-transform:translateX(0);transform:translateX(0)}
+100%{-webkit-transform:translateX(-19px);transform:translateX(-19px)}
+}
+/*!滚动赛事模块 end*/
+/*!战力排行模块 start*/
+.power-rank{float:left;width:820px;height:313px;margin-top:38px}
+.power-rank .part-h2-title{font-size:18px;color:#0b0b0b;left:0}
+.power-rank .part-h2-title:before{display:none}
+.power-rank .part-tab-title{width:726px;left:93px}
+.power-rank .part-tab-title>li{margin-right:50px}
+.power-rank-list{width:840px;height:257px;overflow:hidden;margin-top:21px}
+.player-item{list-style:none;float:left;width:151px;height:257px;margin-right:16px;background-color:#fefefe}
+.player-item .player-name{color:#424242;font-size:14px;width:100%;height:20px;line-height:20px;padding-left:10px;box-sizing:border-box;margin-top:7px;letter-spacing:1px}
+.player-item .player-power{display:none;color:#7ea1a6;font-size:14px;width:100%;height:20px;overflow:hidden;line-height:20px;padding-left:10px;box-sizing:border-box;margin-top:3px}
+.pic-player{width:151px;height:203px;position:relative;background-color:#fefefe;background:-webkit-linear-gradient(top,#fefefe,#fefefe,#8a8a8a);/*! Safari 5.1 - 6.0 */background:-o-linear-gradient(top,#fefefe,#fefefe,#8a8a8a);/*! Opera 11.1 - 12.0 */background:-moz-linear-gradient(top,#fefefe,#fefefe,#8a8a8a);/*! Firefox 3.6 - 15 */background:linear-gradient(top,#fefefe,#fefefe,#8a8a8a)/*! 标准的语法 */}
+.pic-player .power-rank-number{display:block;position:absolute;left:10px;top:10px;text-align:center;line-height:1;font-family:tttgbnumber,sans-serif;font-size:24px;color:#7b7b7b}
+.pic-player .power-rank-number.strong{font-size:36px;color:#bb9a6c}
+.pic-player .player-team-logo{display:block;width:30px;height:auto;position:absolute;top:8px;right:9px}
+.pic-player .player{position:absolute;display:block;width:151px;height:auto;bottom:0;left:0}
+.power-rank-change>li{-webkit-transform:translateX(1000px);transform:translateX(1000px)}
+.power-rank-change>li:nth-of-type(1){-webkit-transition:transform .3s;transition:transform .3s}
+.power-rank-change>li:nth-of-type(2){-webkit-transition:transform .3s .2s;transition:transform .3s .2s}
+.power-rank-change>li:nth-of-type(3){-webkit-transition:transform .3s .4s;transition:transform .3s .4s}
+.power-rank-change>li:nth-of-type(4){-webkit-transition:transform .3s .6s;transition:transform .3s .6s}
+.power-rank-change>li:nth-of-type(5){-webkit-transition:transform .3s .8s;transition:transform .3s .8s}
+.power-rank-change>li:nth-of-type(6){-webkit-transition:transform .3s 1s;transition:transform .3s 1s}
+.power-rank-change>li:nth-of-type(7){-webkit-transition:transform .3s 1.2s;transition:transform .3s 1.2s}
+.power-rank-change.show>li{-webkit-transform:translateX(0);transform:translateX(0)}
+/*!战力排行模块 end*/
+/*!滚动赛程，tab为比赛日期，content为当天比赛list start*/
+.matchlist-day{width:788px;position:relative}
+.matchlist-day-tab-title{width:788px;height:32px;background:#e3e2e2;position:relative;overflow:hidden}
+.matchlist-day-tab-title>.tab-list{width:700px;height:32px;float:left}
+.matchlist-day-tab-title>.match-smallarrow-left,.matchlist-day-tab-title>.match-smallarrow-right{float:left;margin-top:5px;-webkit-transition:filter .3s;transition:filter .3s;filter:brightness(1);-webkit-filter:brightness(1);-webkit-transition:opacity .3s;transition:opacity .3s;opacity:1}
+.matchlist-day-tab-title>.match-smallarrow-left.hide,.matchlist-day-tab-title>.match-smallarrow-right.hide{opacity:.5}
+.matchlist-day-tab-title>.match-smallarrow-left:hover,.matchlist-day-tab-title>.match-smallarrow-right:hover{filter:brightness(1.05);-webkit-filter:brightness(1.05)}
+.matchlist-day-tab-title>.match-smallarrow-left{margin-left:18px}
+.matchlist-day-tab-title>.match-smallarrow-right{margin-left:8px}
+.matchlist-day-title-ul>li{list-style:none;float:left;width:140px;height:32px;font-size:16px;color:#666667;text-align:center;line-height:32px;-webkit-transition:background-color .2s,color .2s;transition:background-color .2s,color .2s;box-sizing:border-box;cursor:pointer}
+.matchlist-day-title-ul>li.selected,.matchlist-day-title-ul>li:hover{background-color:#fbfbfb;color:#1da6ba;font-weight:700;border-bottom:2px #1da6ba solid}
+.matchlist-day-tab-content{width:788px;height:239px;overflow:hidden;background:#fefefe;position:relative}
+.matchlist-day-tab-content>.swiper-container{width:788px;height:240px}
+.matchlist-day-one{width:758px!important;height:60px;overflow:hidden;line-height:60px;position:relative;border-bottom:1px #eef0f0 solid;color:#151517;font-size:16px;padding-right:30px}
+.matchlist-day-one>.status{position:absolute;width:auto;padding:0 3px;border-radius:3px;color:#fff;font-size:12px;line-height:18px;background:#e68f21;left:24px;top:21px}
+.matchlist-day-one>.time{position:relative;float:left;width:120px;margin:0 35px 0 92px;text-align:center}
+.matchlist-day-one>.time>i{margin:0 4px}
+.matchlist-day-one>.team{position:relative;width:110px;height:60px;float:left}
+.matchlist-day-one>.team>.img-wrap{float:left;width:50px;text-align:center;line-height:60px;font-size:0}
+.matchlist-day-one>.team>.img-wrap>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;max-height:35px;width:auto;margin-top:-2px}
+.matchlist-day-one>.team>a{float:left;width:50px;height:60px;text-align:left;margin-left:10px}
+.matchlist-day-one>.teamb>.img-wrap{float:right}
+.matchlist-day-one>.teamb>a{float:right;text-align:right;margin-left:0;margin-right:10px}
+.matchlist-day-one>.score{position:relative;float:left;width:115px;overflow:hidden;text-align:center;color:#3a3a3a;font-size:0;font-weight:700;margin:0 8px}
+.matchlist-day-one>.score>.a1{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:26px;height:33px;border-radius:5px;line-height:32px;background:#3a3a3a;font-size:26px;color:#b0b0b0}
+.matchlist-day-one>.score>.a1.win{color:#fefefe}
+.matchlist-day-one>.score>.a2{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:24px;height:33px;font-size:26px;margin:0 4px;line-height:30px}
+.matchlist-day-one>.herf-data,.matchlist-day-one>.herf-order,.matchlist-day-one>.herf-video{position:relative;margin-top:21px}
+.matchlist-day-one.now:before{display:block;content:'\0020';width:840px;height:60px;background:url(//ossweb-img.qq.com/images/lol/v3/event-ware-1.png) repeat;position:absolute;left:0;top:0;animation:event-ware 1s linear infinite;-webkit-animation:event-ware 1s linear infinite}
+.matchlist-day-one.now>.status{background:#1da6ba}
+.matchlist-day-one.over>.status{background:#bcbcbc}
+/*!滚动赛程，tab为比赛日期，content为当天比赛list end*/
+.score-rank{width:496px;height:auto;margin-top:38px}
+.score-rank .part-h2-title{font-size:18px;color:#0b0b0b;left:0}
+.score-rank .part-h2-title:before{display:none}
+.score-rank .part-tab-title{width:402px;left:93px}
+.score-rank .part-tab-title>li{margin-right:50px}
+.score-rank-content{width:496px;height:257px;margin-top:21px}
+.score-rank-list-title{width:496px;height:32px;line-height:32px;box-sizing:border-box;padding:0 18px;color:#151517;font-size:16px;font-weight:400;background-color:#e0e0e0}
+.score-rank-list-title>a{float:left}
+.score-rank-list-title>.a-1{width:44px}
+.score-rank-list-title>.a-2{width:124px;margin-left:69px}
+.score-rank-list-title>.a-3{width:100px;text-align:center;margin-left:45px}
+.score-rank-list-title>.a-4{float:right;width:44px;text-align:center}
+.score-rank-list-container{width:496px;background-color:#fefefe;overflow:hidden;position:relative}
+.score-rank-list-container:hover>.scrollbar{width:8px}
+.score-rank-list-container>.scrollbar{position:absolute;top:0;right:0;width:5px;height:100%;-webkit-transition:width .2s;transition:width .2s}
+.score-rank-list-container>.scrollbar>.swiper-scrollbar-drag{background-color:#abc0c3;cursor:n-resize!important}
+.score-rank-list{width:496px;height:auto;box-sizing:border-box!important;padding:0 18px}
+.score-rank-list>li{width:460px;height:46px;line-height:46px;overflow:hidden;list-style:none;box-sizing:border-box;border-bottom:1px #e0e2e2 solid}
+.score-rank-list>li>.a-1{float:left;width:44px;height:46px;text-align:center;font-family:tttgbnumber,sans-serif;font-size:18px;color:#7b7b7b}
+.score-rank-list>li>.strong{font-size:24px;color:#b79e76}
+.score-rank-list>li>.a-2{float:left;width:124px;margin-left:69px;font-size:16px;color:#151517}
+.score-rank-list>li>.a-2>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:25px;height:auto;margin:-2px 12px 0 0}
+.score-rank-list>li>.a-3{float:left;width:100px;text-align:center;margin-left:45px;font-size:16px;color:#5f8d94}
+.score-rank-list>li>.a-4{float:right;width:44px;text-align:center;font-size:16px;color:#5f8d94}
+.score-rank-534{width:534px;height:auto;margin-top:38px}
+.score-rank-534 .part-h2-title{font-size:18px;color:#0b0b0b;left:0}
+.score-rank-534 .part-h2-title:before{display:none}
+.score-rank-534 .part-tab-title{width:440px;left:93px}
+.score-rank-534 .part-tab-title>li{margin-right:50px}
+.score-rank-534 .score-rank-list{width:534px}
+.score-rank-534 .score-rank-list>li{width:498px}
+.score-rank-534 .score-rank-content,.score-rank-534 .score-rank-list-container,.score-rank-534 .score-rank-list-title{width:534px}
+.list-col{height:auto;width:268px;overflow:hidden;float:left}
+.list-col.final{padding-top:77px}
+.list-col-one{width:100%;height:auto;margin-bottom:39px}
+.list-col-one>.info{width:100%;height:20px;overflow:hidden;margin-bottom:7px}
+.list-col-one>.info>.status{float:left;height:15px;line-height:15px;padding:0 2px;font-size:12px;color:#fff;border-radius:2px;margin-top:3px}
+.list-col-one>.info>.time{float:left;margin-left:10px;height:15px;line-height:15px;color:#676767;font-size:12px;margin-top:3px}
+.list-col-one>.info>.herf-data,.list-col-one>.info>.herf-order,.list-col-one>.info>.herf-video{float:right;padding:0 6px;box-sizing:border-box;border:1px solid;font-size:14px;height:20px;line-height:18px;margin-left:10px;-webkit-transition:background-color .2s,color .2s;transition:background-color .2s,color .2s}
+.list-col-one>.info>.herf-data{border-color:#7ea1a6;color:#7ea1a6}
+.list-col-one>.info>.herf-data:hover{background-color:#7ea1a6;color:#fff}
+.list-col-one>.info>.herf-video{border-color:#bb9a6c;color:#bb9a6c}
+.list-col-one>.info>.herf-video:hover{background-color:#bb9a6c;color:#fff}
+.list-col-one>.info>.herf-order{border-color:#1da6ba;color:#1da6ba}
+.list-col-one>.info>.herf-order:hover{background-color:#1da6ba;color:#fff}
+.list-col-one>.team{width:100%;height:44px;overflow:hidden;position:relative;background-color:#f7f6f6;margin-bottom:1px}
+.list-col-one>.team>.img-wrap{float:left;width:40px;height:44px;text-align:center;line-height:41px;margin-left:6px;position:relative}
+.list-col-one>.team>.img-wrap>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:auto;height:auto;max-height:30px}
+.list-col-one>.team>.team-name{position:relative;float:left;font-size:16px;height:44px;line-height:44px;color:#676767;margin-left:8px}
+.list-col-one>.team>.score{position:relative;float:right;width:23px;height:44px;text-align:center;line-height:44px;color:#fff;background-color:#bcbcbc;font-size:16px;font-family:tttgbnumber,sans-serif}
+.list-col-one>.team.win>.score{background-color:#86a2ad}
+.list-col-one.over .status{background-color:#bcbcbc}
+.list-col-one.now .team:before{content:'\0020';display:block;background:url(//ossweb-img.qq.com/images/lol/v3/event-ware.png);width:280px;height:44px;position:absolute;animation:event-ware 1s linear infinite;-webkit-animation:event-ware 1s linear infinite}
+.list-col-one.now .status{background-color:#1da6ba}
+.list-col-one.now .score{background-color:#86a2ad}
+.list-col-one.wait .status{background-color:#e68f21}
+.list-col-one.wait .team{background-color:#faf6ec}
+.list-col-one.wait .score{background-color:#d1a662}
+@keyframes event-ware{
+0%{-webkit-transform:translateX(0);transform:translateX(0)}
+100%{-webkit-transform:translateX(-28px);transform:translateX(-28px)}
+}
+@-webkit-keyframes event-ware{
+0%{-webkit-transform:translateX(0);transform:translateX(0)}
+100%{-webkit-transform:translateX(-28px);transform:translateX(-28px)}
+}
+@keyframes event-ware-2{
+0%{-webkit-transform:translateX(0);transform:translateX(0)}
+100%{-webkit-transform:translateX(-42px);transform:translateX(-42px)}
+}
+@-webkit-keyframes event-ware-2{
+0%{-webkit-transform:translateX(0);transform:translateX(0)}
+100%{-webkit-transform:translateX(-42px);transform:translateX(-42px)}
+}
+/*!赛事样式重载 start*/
+.event-type-0{width:1358px;height:auto;*zoom:1}
+.event-type-0:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.event-type-0 .score-rank{float:right}
+.event-type-0 .score-rank-list-container{height:225px}
+.event-type-1{height:418px;overflow:hidden}
+.event-type-1 .link-0{float:left;display:block;width:85px;height:156px;box-sizing:border-box;border-top:1px #c2c2c2 solid;border-bottom:1px #c2c2c2 solid;margin-top:106px}
+.event-type-1 .link-1{float:left;display:block;margin-top:106px;background-position:0 -452px;width:110px;height:155px}
+.match-s-playin{width:100%;*zoom:1}
+.match-s-playin:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.match-s-playin .score-rank-list-container{height:183px}
+.match-s-playin .m-first{width:550px;height:556px;float:left}
+.match-s-playin .m-second{float:right;width:726px;height:556px;overflow:hidden}
+.match-s-playin .m-second-gamelist{width:261px;height:556px;overflow:hidden;float:left}
+.match-s-playin .score-rank-534{margin-top:51px}
+.match-s-playin .list-col-one{margin-bottom:19px}
+.match-s-playin .m-link{float:left;padding-top:81px}
+.match-s-playin .m-link>i{display:block;margin-bottom:80px}
+.match-s-playin .m-winer{float:left;padding-top:84px;height:473px;overflow:hidden}
+.match-s-playin .m-winer>.u-winer{margin-bottom:91px}
+.match-s-group{*zoom:1}
+.match-s-group:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.match-s-group .score-rank-534{margin-top:20px;float:left}
+.match-s-group .score-rank-content{height:auto}
+.match-s-group .score-rank-list{height:215px}
+.match-s-group .score-rank-list>li{height:54px;line-height:54px}
+.match-s-group .matchlist-day{float:right;margin-top:52px}
+.match-s-knockout{*zoom:1}
+.match-s-knockout:after{content:'\20';display:block;height:0;line-height:0;visibility:hidden;clear:both}
+.match-s-knockout>div{float:left;height:551px;overflow:hidden;box-sizing:border-box}
+.match-s-knockout .m-part1{width:261px}
+.match-s-knockout .m-part1 .list-col-one{margin-bottom:17px}
+.match-s-knockout .m-link1{padding-top:106px}
+.match-s-knockout .m-link1 .link-3{display:block;margin-bottom:132px}
+.match-s-knockout .m-part2{width:261px;padding-top:66px}
+.match-s-knockout .m-part2 .list-col-one{margin-bottom:150px}
+.match-s-knockout .m-link2{padding-top:172px}
+.match-s-knockout .m-link2 .link-4{display:block}
+.match-s-knockout .m-part3{width:261px;padding-top:197px}
+/*!全明星1V1 start*/
+.allstar-1v1{width:100%;height:937px;overflow:hidden}
+.allstar-1v1>div{float:left}
+.allstar-1v1 .info{margin-top:4px}
+.allstar-1v1>.column-1{width:134px}
+.allstar-1v1>.column-1 .match-part-name{font-size:14px}
+.allstar-1v1>.column-1 .list-col-one{margin-bottom:18px}
+.allstar-1v1>.column-1 .team{height:36px}
+.allstar-1v1>.column-1 .team>.img-wrap{height:36px;width:32px;line-height:34px;margin-left:2px}
+.allstar-1v1>.column-1 .team>.img-wrap>img{height:30px}
+.allstar-1v1>.column-1 .team>.team-name{height:36px;line-height:36px;font-size:12px;margin-left:4px}
+.allstar-1v1>.column-1 .team>.score{height:36px;line-height:36px;font-size:12px;width:20px}
+.allstar-1v1>.column-1 .info>.time{margin-left:6px}
+.allstar-1v1>.column-1 .info>a{font-size:12px}
+.allstar-1v1>.column-2{padding-top:58px}
+.allstar-1v1>.column-2 .list-col-one{margin-bottom:133px}
+.allstar-1v1>.column-3{padding-top:176px}
+.allstar-1v1>.column-3 .list-col-one{margin-bottom:362px}
+.allstar-1v1>.column-4{padding-top:407px}
+.allstar-1v1>.column-5{width:196px;padding-top:399px}
+.allstar-1v1>.column-5 .match-part-name{font-size:16px}
+.allstar-1v1>.column-5 .team{height:44px}
+.allstar-1v1>.column-5 .team>.img-wrap{width:44px;height:44px;line-height:42px}
+.allstar-1v1>.column-5 .team>.img-wrap>img{height:38px;max-height:38px}
+.allstar-1v1>.column-5 .team>.score,.allstar-1v1>.column-5 .team>.team-name{height:44px;line-height:44px;font-size:14px}
+.allstar-1v1>.column-5 .team>.score{width:30px}
+.allstar-1v1>.column-5 .info{height:28px;line-height:28px}
+.allstar-1v1>.column-5 .info>.time{font-size:14px;margin-top:6px}
+.allstar-1v1>.column-5 .info>a{font-size:14px;height:24px;line-height:21px;margin-top:1px}
+.allstar-1v1>.allstar-link-part-1{width:11px;overflow:hidden;padding-top:71px}
+.allstar-1v1>.allstar-link-part-1>.allstar-link-1{display:block;background-position:-672px -465px;width:11px;height:116px;margin-bottom:114px}
+.allstar-1v1>.allstar-link-part-1>.allstar-link-2{display:block;background-position:-688px -472px;width:11px;height:116px;margin-bottom:114px}
+.allstar-1v1>.allstar-link-part-2{width:11px;overflow:hidden;padding-top:130px}
+.allstar-1v1>.allstar-link-part-2>.allstar-link-3{display:block;background-position:-688px 0;width:11px;height:231px;margin-bottom:228px}
+.allstar-1v1>.allstar-link-part-2>.allstar-link-4{display:block;background-position:-688px -236px;width:11px;height:231px;margin-bottom:228px}
+.allstar-1v1>.allstar-link-part-3{width:11px;overflow:hidden;padding-top:247px}
+.allstar-1v1>.allstar-link-part-3>.allstar-link-5{display:block;background-position:-656px 0;width:11px;height:460px;margin-bottom:228px}
+.allstar-1v1>.allstar-link-part-3>.allstar-link-6{display:block;background-position:-672px 0;width:11px;height:460px;margin-bottom:228px}
+.allstar-1v1>.allstar-link-part-4{width:11px;overflow:hidden;padding-top:478px}
+.allstar-1v1>.allstar-link-part-4>.allstar-link-7{display:block;background-position:-688px -593px;width:11px;height:1px;margin-bottom:228px}
+/*!全明星1V1 end*/
+/*!全明星exhibition start*/
+.allstar-exhibition>.matchlist-day-tab-content{width:1358px;height:454px;margin:0 auto;background-color:transparent}
+.allstar-exhibition>.matchlist-day-tab-content>.swiper-container{width:1358px;height:455px}
+.allstar-exhibition .matchlist-day-one{width:1350px!important;height:90px!important;line-height:90px;color:#676767}
+.allstar-exhibition .matchlist-day-one>.status{width:76px;height:29px;line-height:29px;font-size:14px;font-weight:700;text-align:center;top:30px;left:7px;border-radius:5px}
+.allstar-exhibition .matchlist-day-one>.time{margin-left:110px;margin-right:40px}
+.allstar-exhibition .matchlist-day-one>.name{width:96px;float:left;position:relative;margin-right:50px}
+.allstar-exhibition .matchlist-day-one>.mode{width:96px;float:left;position:relative;margin-right:60px;color:#7ea1a6}
+.allstar-exhibition .matchlist-day-one>.team{width:220px;height:90px}
+.allstar-exhibition .matchlist-day-one>.team>.img-wrap{width:80px;height:80px;line-height:80px;margin-top:5px}
+.allstar-exhibition .matchlist-day-one>.team>.img-wrap>img{height:60px;max-height:60px}
+.allstar-exhibition .matchlist-day-one>.score{width:125px}
+.allstar-exhibition .matchlist-day-one>.score>.a1{width:35px;height:50px;line-height:48px}
+.allstar-exhibition .matchlist-day-one>.herf-data,.allstar-exhibition .matchlist-day-one>.herf-order,.allstar-exhibition .matchlist-day-one>.herf-video{margin-top:31px}
+.allstar-exhibition .matchlist-day-one.now:before{width:1428px;height:90px;background:url(//ossweb-img.qq.com/images/lol/v3/event-ware-2.png) repeat;animation:event-ware-2 1s linear infinite;-webkit-animation:event-ware-2 1s linear infinite}
+.allstar-exhibition .matchlist-day-one>.herf-data,.allstar-exhibition .matchlist-day-one>.herf-order,.allstar-exhibition .matchlist-day-one>.herf-video{width:79px;height:29px;line-height:27px;text-align:center;margin-right:6px}
+/*!全明星exhibition end*/
+/*!德玛西亚杯 start*/
+.demacia-cup{overflow:hidden;height:842px}
+.demacia-cup>.fail-part,.demacia-cup>.win-part{overflow:hidden;float:left;position:relative}
+.demacia-cup>.win-part{height:570px}
+.demacia-cup>.final-part{width:245px;float:right;position:relative}
+.demacia-cup .column{width:245px;float:left}
+.demacia-cup .column.w-2{padding-top:58px}
+.demacia-cup .column.w-2 .list-col-one{margin-bottom:148px}
+.demacia-cup .column.w-3{padding-top:182px}
+.demacia-cup .column.w-4{padding-top:396px}
+.demacia-cup .column.f-3{padding-top:58px}
+.demacia-cup .link-part{float:left}
+.demacia-cup .link-part.w-1{padding-top:102px}
+.demacia-cup .link-part.w-1 .link-1{margin-bottom:127px}
+.demacia-cup .link-part.w-2{padding-top:160px}
+.demacia-cup .link-part.w-3{position:absolute;right:100%;top:0;padding-top:284px}
+.demacia-cup .list-col-one{margin-bottom:20px}
+.demacia-cup .list-col-one .team{height:40px}
+.demacia-cup .list-col-one .team>.img-wrap{height:40px;line-height:38px}
+.demacia-cup .list-col-one .team>.score{height:40px;line-height:40px}
+.demacia-cup .list-col-one .info>.time{margin-left:4px}
+.demacia-cup .list-col-one .info>a{margin-left:4px}
+.demacia-cup .link-1{background-position:-616px -262px;width:35px;height:129px;display:block}
+.demacia-cup .link-2{background-position:-616px 0;width:35px;height:257px;display:block}
+.demacia-cup .link-3{background-position:0 0;width:308px;height:447px;display:block}
+.demacia-cup .link-5{display:block;width:35px}
+/*!德玛西亚杯 end*/
+/*!赛事样式重载 end*/
+/*!# sourceMappingURL=index-match.css.map */

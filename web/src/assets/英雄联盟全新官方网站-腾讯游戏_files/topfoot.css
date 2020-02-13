@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/*!***** 官网通用模块样式 包含:顶部底部雪碧图、官网通用页头、官网通用底部 */
+/*! 引入sprite图 start*/
+#footWrap .foot_ieg_logo,#footWrap .logo-riot,.act-link,.comm-avatar-border,.comm-icon-phone,.comm-icon-search,.head-app-hover,.head-userinfo-avatar>span,.icon-dsj,.icon-hot,.icon-new,.icon-xx-1,.logined-top .select-area:after,.logo-riot,.logo-tencentgame,.top-act-link,.topfoot-spr,.zm-hover-bg{background-image:url(//game.gtimg.cn/images/lol/v3/topfoot-spr.png);background-size:405px 178px;background-repeat:no-repeat}
+.act-link{background-position:-216px -39px;width:160px;height:40px}
+.comm-avatar-border{background-position:-216px -117px;width:48px;height:48px}
+.comm-icon-phone{background-position:-303px -84px;width:16px;height:24px}
+.comm-icon-search{background-position:-381px -39px;width:21px;height:21px}
+.icon-dsj{background-position:-366px -84px;width:16px;height:9px}
+.icon-hot{background-position:-347px -84px;width:14px;height:14px}
+.icon-new{background-position:-381px -65px;width:14px;height:14px}
+.icon-xx-1{background-position:-324px -84px;width:18px;height:18px}
+.logo-riot{background-position:-216px -84px;width:82px;height:28px}
+.logo-tencentgame{background-position:-216px 0;width:189px;height:34px}
+.zm-hover-bg{background-position:0 0;width:211px;height:178px}
+/*! 引入sprite图 end */
+/*! 动画申明 start */
+@keyframes arrowanim{
+0%,100%,54%{-webkit-transform:translateX(0);transform:translateX(0)}
+18%,36%{-webkit-transform:translateX(4px);transform:translateX(4px)}
+27%{-webkit-transform:translateX(1px);transform:translateX(1px)}
+}
+@-webkit-keyframes arrowanim{
+0%,100%,54%{-webkit-transform:translateX(0);transform:translateX(0)}
+18%,36%{-webkit-transform:translateX(4px);transform:translateX(4px)}
+27%{-webkit-transform:translateX(1px);transform:translateX(1px)}
+}
+@keyframes topin{
+0%{-webkit-transform:translateY(-10px);transform:translateY(-10px);opacity:0}
+100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}
+}
+@-webkit-keyframes topin{
+0%{-webkit-transform:translateY(-10px);transform:translateY(-10px);opacity:0}
+100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}
+}
+@keyframes opacityin{
+0%{opacity:0}
+100%{opacity:1}
+}
+@-webkit-keyframes opacityin{
+0%{opacity:0}
+100%{opacity:1}
+}
+/*! 动画申明 end */
+/*! 顶部通用零碎元素样式 start*/
+#loginDiv{min-height:345px!important}
+.comm-head a{text-decoration:none}
+.comm-head a:hover{text-decoration:none}
+.comm-head .icon-hot,.comm-head .icon-new{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:14px;height:14px;margin:-2px 2px 0 0}
+/*! 顶部通用零碎元素样式 end*/
+/*! 浏览器兼容提示 start */
+.chromeframe{background:#000;color:#fff;padding:10px 0;text-align:center;width:100%;font-size:14px;position:relative;z-index:12}
+.chromeframe a{color:#f13c35}
+/*! 浏览器兼容提示 end */
+/*! 官网通用页头 start*/
+.comm-head{width:100%;height:78px;overflow:visible;position:absolute;top:0;left:0;z-index:11}
+.comm-head .logo{float:left;width:132px;height:49px;margin-top:10px}
+.head-normal{width:100%;max-width:1358px;min-width:1230px;height:78px;margin:0 auto;position:relative;z-index:10}
+.head-nav{float:left;width:55%;height:78px;box-sizing:border-box;margin-left:30px;padding-top:16px}
+.head-nav>li{float:left;list-style:none;width:20%;height:78px;text-align:center}
+.head-nav>li>a{display:block;width:100%;height:100%}
+.head-nav-title{display:block;color:#fff;font-size:18px;letter-spacing:1px}
+.head-nav-subtitle{display:block;color:#aeaeae;font-size:11px;margin-top:-1px;letter-spacing:1px}
+.head-userinfo-normal{float:right;width:244px;height:78px;position:relative;z-index:3}
+.head-userinfo-avatar{float:left;width:48px;height:48px;position:relative;margin-top:14px;line-height:48px;text-align:center;font-size:0}
+.head-userinfo-avatar>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:36px;height:auto;border-radius:50%}
+.head-userinfo-avatar>span{display:block;background-position:-216px -117px;width:48px;height:48px;position:absolute;top:0;left:0}
+.head-userinfo-brief{float:left;margin-left:10px}
+.head-userinfo-brief>.logined{color:#cdbe91;line-height:78px;font-size:0}
+.head-userinfo-brief>.logined>a{display:inline-block;vertical-align:middle;*zoom:1;*display:inline}
+.head-userinfo-brief>.logined>.logined-name{font-size:16px;width:auto;height:78px;max-width:135px;overflow:hidden}
+.head-userinfo-brief>.logined>.logined-logout{font-size:14px;color:#cdbe91;margin-left:10px}
+.head-userinfo-brief>.login-unbindarea,.head-userinfo-brief>.unlogin{color:#fefefe;font-size:16px;line-height:78px}
+.head-userinfo-brief>.login-unbindarea>a,.head-userinfo-brief>.unlogin>a{color:#fff3d0}
+.head-app-normal{float:right;width:40px;height:40px;text-align:center;line-height:40px;margin:17px 31px 0 0}
+.head-app-normal>a{display:inline-block;vertical-align:middle;*zoom:1;*display:inline}
+.head-search-btn{float:right;width:40px;height:40px;text-align:center;line-height:40px;margin:17px 12px 0 0}
+.head-search-btn>i{display:inline-block;vertical-align:middle;*zoom:1;*display:inline}
+.head-nav-sub{display:none;position:absolute;left:0;top:0;width:100%;overflow:hidden;background:url(//game.gtimg.cn/images/lol/v3/dark60-bg-repeat.png) repeat;padding:88px 0 32px 0}
+.head-nav-sub .head-nav-sub-inner{width:100%;max-width:1358px;min-width:1230px;height:auto;margin:0 auto}
+.head-nav-sub ul{width:55%;overflow:hidden;margin-left:161px}
+.head-nav-sub ul>li{list-style:none;width:20%;float:left;height:auto;overflow:visible}
+.head-nav-sub.show{display:block;animation:topin .3s;-webkit-animation:topin .3s}
+.head-nav-sub-a{display:block;width:100%;height:29px;overflow:hidden;line-height:29px;color:#e1e1e1;font-size:14px;text-align:center}
+.head-nav-sub-a:hover{color:#e9c06c}
+.head-app-hover{background-position:0 0;width:211px;height:178px;position:absolute;top:68px;right:190px;display:none}
+.head-app-hover>.p1{color:#cdbe91;font-size:12px;width:100%;margin-top:10px;text-align:center}
+.head-app-hover>.polo{width:50px;height:50px;display:block;position:absolute;right:-8px;bottom:-2px}
+.head-app-hover.show{display:block;animation:topin .3s;-webkit-animation:topin .3s}
+.head-zm-qrcode{display:block;width:120px;height:120px;text-align:center;line-height:117px;background-color:#fff;margin:22px auto 0 auto;border-radius:10px}
+.head-zm-qrcode>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:110px;height:110px}
+.head-login-hover{position:absolute;display:none;top:0;right:-38px;width:310px;height:auto;overflow:hidden;background:url(//game.gtimg.cn/images/lol/v3/dark70-bg-repeat.png) repeat;padding-top:78px}
+.head-login-hover.show{display:block;animation:topin .3s;-webkit-animation:topin .3s}
+.head-login-hover .p1,.head-login-hover .p2{width:100%;height:auto;box-sizing:border-box;padding:0 24px;font-size:12px;color:#848383;text-align:center}
+.head-login-hover .p1{margin-top:30px}
+.head-login-hover .p2{margin-top:14px}
+.head-login-hover .href-gouserhome{display:block;width:100%;height:44px;line-height:44px;text-align:center;color:#fff;font-size:16px;background-color:#000;margin-top:20px}
+.head-login-hover .href-gouserhome:hover>i{animation-name:arrowanim;-webkit-animation-name:arrowanim}
+.logined-top{width:100%;height:24px;line-height:24px;box-sizing:border-box;padding:0 12px}
+.logined-top .select-area{float:left;width:auto;padding-left:10px;background-color:#2f2d2d;color:#848383;font-size:12px;text-align:left;position:relative}
+.logined-top .select-area:after{content:'\0020';display:inline-block;vertical-align:middle;*zoom:1;*display:inline;background-position:-366px -84px;width:16px;height:9px;margin:-2px 10px 0 10px}
+.logined-top .user-name{text-align:left;float:right;width:auto;max-width:154px;height:24px;font-size:16px;color:#cdbe91}
+.logined-ul{width:100%;height:auto;overflow:hidden;box-sizing:border-box;padding-left:10px}
+.logined-ul>li{float:right;list-style:none}
+.logined-ul .user-rank{float:left;width:88px;height:135px;text-align:center}
+.logined-ul .user-rank .img-wrap{width:100%;height:90px;text-align:center;line-height:100px}
+.logined-ul .user-rank .img-wrap>img{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;width:auto;max-width:88px;height:auto}
+.logined-ul .user-rank .a1{color:#cdbe91;font-size:16px;line-height:24px}
+.logined-ul .user-rank .a2{color:#848383;font-size:12px}
+.logined-ul .user-datalist{width:100px;height:67px;text-align:center;padding-top:22px;box-sizing:border-box}
+.logined-ul .user-datalist .a1{font-size:20px;line-height:24px;color:#cdbe91}
+.logined-ul .user-datalist .a2{font-size:12px;color:#848383}
+.search-hover-wrap{position:absolute;left:0;top:0;width:100%;height:78px;overflow:visible;background-color:#081322;z-index:11;display:none}
+.search-hover-wrap>.search-hover-inner{min-width:1230px;max-width:1358px;height:78px;margin:0 auto;position:relative}
+.search-hover-wrap.show{display:block;animation:opacityin .3s;-webkit-animation:opacityin .3s}
+.search-hover-wrap .btn-search{float:right;width:40px;height:40px;text-align:center;line-height:40px;margin:17px 327px 0 0}
+.search-hover-wrap .btn-search>i{display:inline-block;vertical-align:middle;*zoom:1;*display:inline}
+.search-hover-wrap .input-search{float:right;width:368px;height:40px;line-height:40px;background-color:#081322;box-sizing:border-box;padding-left:5px;color:#fff;font-size:16px;margin:19px 200px 0 0;border:none}
+.search-hover-wrap .btn-close-search{float:right;width:40px;height:40px;text-align:center;line-height:40px;margin:17px 6px 0 0}
+.search-hover-wrap .btn-close-search>i{display:inline-block;vertical-align:middle;*zoom:1;*display:inline}
+.search-hover-bottom{display:none;position:absolute;top:78px;left:389px;width:500px;height:auto;background-color:#fff;border-radius:0 0 5px 5px;box-shadow:0 0 10px 0 rgba(0,0,0,.7)}
+.search-hover-bottom.show{display:block;animation:topin .4s;-webkit-animation:topin .4s}
+.search-hover-bottom .hover-bottom-s1{display:block;height:40px;line-height:40px;color:#a4a6a9;font-size:12px;padding:0 20px;box-sizing:border-box}
+.search-hover-bottom .hover-bottom-s2{display:block;float:right;height:40px;line-height:40px;color:#a4a6a9;font-size:12px;padding:0 20px;box-sizing:border-box}
+.search-direct-href>li{height:40px;line-height:40px;list-style:none;padding:0 20px;box-sizing:border-box;cursor:pointer}
+.search-direct-href>li:hover{background-color:#eee}
+.search-direct-href>li>a{font-size:14px;color:#444}
+/*! 官网通用页头 end */
+/*! 官网通用顶部活动 start*/
+.comm-topact{width:100%;min-width:1230px;height:360px;overflow:hidden;position:relative;background:center top no-repeat;-webkit-transition:height .6s,background,.6s;transition:height .6s,background,.6s}
+.comm-topact .dark-mask{width:100%;height:131px;position:absolute;left:0;top:0;background:url(//game.gtimg.cn/images/lol/v3/dark-jianbian-repeatx-0.png) repeat center top;z-index:1}
+.topact-big-img,.topact-small-img{position:absolute;left:50%;top:0;width:1920px;height:100%;margin-left:-960px}
+.topact-small-img{-webkit-transition:opacity .6s;transition:opacity .6s;opacity:1}
+.comm-topact-inner{width:auto;max-width:1358px;min-width:1230px;height:100%;position:relative;margin:0 auto}
+.top-act-link{-webkit-transition:bottom .6s,background .3s;transition:bottom .6s,background .3s;display:block;position:absolute;z-index:1;left:50%;margin-left:-77px;bottom:32px;background-position:-216px -39px;width:160px;height:40px;font-size:0;-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1)}
+.top-act-link.left{left:0;margin-left:0}
+.top-act-link:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.top-version{position:absolute;z-index:2;right:0;bottom:28px;font-size:14px;color:#888787}
+.top-version em{color:#f5d185;margin-right:10px}
+.top-version-link{display:inline-block;padding:0 15px;height:22px;border:2px solid #f5d185;text-align:center;line-height:22px;background:#000;background:rgba(0,0,0,.65);font-size:12px;color:#f5d185;-moz-border-image:-moz-linear-gradient(top,#6b5024 0,#b88d35 100%);-webkit-border-image:-webkit-linear-gradient(top,#6b5024 0,#b88d35 100%);border-image:linear-gradient(to bottom,#6b5024 0,#b88d35 100%);border-image-slice:1;-webkit-transition:filter .5s;transition:filter .5s;filter:brightness(1);-webkit-filter:brightness(1)}
+.top-version-link:hover{filter:brightness(1.15);-webkit-filter:brightness(1.15)}
+.top-version-link:hover{background:#111;background:rgba(0,0,0,.9)}
+/*! 官网通用顶部活动 end */
+/*! 官网通用底部,使用id强制替换样式,避免foot样式更新导致的错乱 start */
+#footWrap{width:100%;min-width:1230px;padding:45px 0;background-color:#e3e2e2;color:#9f9378;font-size:12px;line-height:24px}
+#footWrap a{color:#9f9378}
+#footWrap a:hover{text-decoration:underline}
+#footWrap li{color:#9f9378}
+#footWrap .foot_dark{background-color:#e3e2e2}
+#footWrap .foot_inner{max-width:1358px;min-width:1230px;height:auto;margin:0 auto;overflow:hidden;position:relative}
+#footWrap .foot_lefts{display:block!important;height:100px;width:auto;line-height:100px;font-size:0;text-align:left;position:absolute;left:20px;top:50%;margin-top:-50px}
+#footWrap .foot_lefts>a{display:inline-block;vertical-align:middle;*zoom:1;*display:inline;margin:0 24px 0 8px}
+#footWrap .foot_ieg_logo{background-position:-216px 0;width:189px;height:34px;float:none}
+#footWrap .logo-riot{background-position:-216px -84px;width:82px;height:28px;float:none}
+#footWrap .foot_links{width:750px}
+#footWrap .f_line{color:#9f9378;margin:0 2px}
+/*! 官网通用底部 end */
+/*! 重置其他组件引入的iframe引起的底部移除白边 start*/
+#loginStatusSyncFrame_ams_ame{display:block}
+/*! 重置其他组件引入的iframe引起的底部移除白边 end*/
