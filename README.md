@@ -1,5 +1,7 @@
-# Node.js-Vue.js
+# LOLHelper
 
-#### 后台功能基本实现
+#### This is a small mobile League of Legends information website. The functions that have been implemented so far are the carousel on the homepage, news information, specific information of some heroes, and the interface for data manipulation in the background
 
-#### 前端界面基本完成
+Here are the main points:
+
+ - 
