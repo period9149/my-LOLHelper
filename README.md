@@ -19,6 +19,8 @@ And the features of this project are：
   
   - Irreversible encryption of administrator passwords with 'bcrypt'
   
+  - Written a unified CRUD interface template to improve development efficiency
+  
   - The front end used 'dayjs' to display and optimize the time data extracted from mongodb
   
   - Use 'scss' to predefine many common styles to improve development efficiency
